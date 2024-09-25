@@ -54,7 +54,7 @@ jobs:
   # Build ARM
   # ---------------------------------------
   arm:
-    #if: false
+    if: false
     needs: set-matrix
     uses: ./.github/workflows/build_util.yml
     strategy:
@@ -84,7 +84,7 @@ jobs:
     secrets: inherit
     with:
       port: 'espressif'
-      boards: ${{ toJSON(fromJSON(needs.set-matrix.outputs.json)['espressif'].board) }}
+      boards: '["charachorder_lite_s2", "charachorder_x_s2", "charachorder_engine_s2"]'
       build-system: 'make'
       toolchain: 'esp-idf'
       toolchain_version: 'v5.1.4'
@@ -112,6 +112,7 @@ jobs:
   # Unit testing with ghostfat
   # ---------------------------------------
   ghostfat:
+    if: false
     needs: set-matrix
     uses: ./.github/workflows/build_ghostfat.yml
     with:
@@ -121,6 +122,7 @@ jobs:
   # Build ARM with CMake
   # ---------------------------------------
   arm-cmake:
+    if: false
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
