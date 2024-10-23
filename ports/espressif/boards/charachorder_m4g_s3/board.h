@@ -54,7 +54,7 @@
 
 // LED for indicator and writing flash
 // If not defined neopixel will be use for flash writing instead
-#define LED_PIN               41
+#define LED_PIN               38
 #define LED_STATE_ON          0
 
 //--------------------------------------------------------------------+
@@ -62,7 +62,7 @@
 //--------------------------------------------------------------------+
 
 #define USB_VID           0x303A
-#define USB_PID           0x829A
+#define USB_PID           0x829B
 #define USB_MANUFACTURER  "CharaChorder"
 #define USB_PRODUCT       "Master Forge S3 - UF2 Bootloader"
 
