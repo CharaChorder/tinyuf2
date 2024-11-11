@@ -46,7 +46,7 @@
 //--------------------------------------------------------------------+
 
 #define USB_VID           0x303A
-#define USB_PID           0x8254
+#define USB_PID           0x8253
 #define USB_MANUFACTURER  "CharaChorder"
 #define USB_PRODUCT       "TWO S3 - UF2 Bootloader"
 
