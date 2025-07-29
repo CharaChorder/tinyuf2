@@ -74,12 +74,13 @@ SELF_UF2 ?= apps/self_update/$(BUILD)/update-$(OUTNAME).uf2
 
 $(BIN):
 	@$(MKDIR) -p $@
+	@$(MKDIR) -p $@/apps
 
 copy-artifact: $(BIN)
 copy-artifact: $(BUILD)/$(OUTNAME).bin $(BUILD)/$(OUTNAME).hex
 	@$(CP) $(BUILD)/$(OUTNAME).bin $(BIN)
 	@$(CP) $(BUILD)/$(OUTNAME).hex $(BIN)
-	@if [ -f "$(SELF_UF2)" ]; then $(CP) $(SELF_UF2) $(BIN); fi
+	@if [ -f "$(SELF_UF2)" ]; then $(CP) $(SELF_UF2) $(BIN)/apps; fi
 
 #-------------- Compile Rules --------------
 
@@ -207,3 +208,8 @@ OPENOCD_WCH ?= /home/${USER}/app/riscv-openocd-wch/src/openocd
 OPENOCD_WCH_OPTION ?=
 flash-openocd-wch: $(BUILD)/$(OUTNAME).elf
 	$(OPENOCD_WCH) $(OPENOCD_WCH_OPTION) -c init -c halt -c "flash write_image $<" -c reset -c exit
+
+#-------------------- Flash with uf2 -----------------
+UF2CONV_PY = $(TOP)/lib/uf2/utils/uf2conv.py
+flash-uf2: $(BUILD)/$(OUTNAME).uf2
+	python ${UF2CONV_PY} -f ${UF2_FAMILY_ID} --deploy $^

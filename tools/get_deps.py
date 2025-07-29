@@ -11,6 +11,9 @@ deps_mandatory = {}
 # Optional Dependencies per MCU
 # path, url, commit, family (Alphabet sorted by path)
 deps_optional = {
+    'lib/mcu/analog/msdk' : ['https://github.com/analogdevicesinc/msdk.git',
+                            'b20b398d3e5e2007594e54a74ba3d2a2e50ddd75',
+                            'maxim'],
     'lib/mcu/nxp/mcux-sdk': ['https://github.com/nxp-mcuxpresso/mcux-sdk.git',
                              '9990f264f98430f6d885041ab0f24224d68f4958',
                              'kinetis_k kinetis_k32l2 kinetis_kl lpc51 lpc54 lpc55 mcx mimxrt10xx'],
@@ -20,6 +23,9 @@ deps_optional = {
     'lib/mcu/st/cmsis_device_f4': ['https://github.com/STMicroelectronics/cmsis_device_f4.git',
                                    '2615e866fa48fe1ff1af9e31c348813f2b19e7ec',
                                    'stm32f4'],
+    'lib/mcu/st/cmsis_device_h5': ['https://github.com/STMicroelectronics/cmsis_device_h5.git',
+                                   '9a778e0f162bd21200647adafb922d50b2c60f81',
+                                   'stm32h5'],
     'lib/mcu/st/cmsis_device_h7': ['https://github.com/STMicroelectronics/cmsis_device_h7.git',
                                    '60dc2c913203dc8629dc233d4384dcc41c91e77f',
                                    'stm32h7'],
@@ -32,6 +38,9 @@ deps_optional = {
     'lib/mcu/st/stm32f4xx_hal_driver': ['https://github.com/STMicroelectronics/stm32f4xx_hal_driver.git',
                                         '04e99fbdabd00ab8f370f377c66b0a4570365b58',
                                         'stm32f4'],
+    'lib/mcu/st/stm32h5xx_hal_driver': ['https://github.com/STMicroelectronics/stm32h5xx_hal_driver.git',
+                                        '7e8c7d8e91c15321864f513f8458ce7f6555eb4e',
+                                        'stm32h5'],
     'lib/mcu/st/stm32h7xx_hal_driver': ['https://github.com/STMicroelectronics/stm32h7xx_hal_driver.git',
                                         'd8461b980b59b1625207d8c4f2ce0a9c2a7a3b04',
                                         'stm32h7'],
