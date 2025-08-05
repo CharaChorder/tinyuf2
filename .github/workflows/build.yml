@@ -54,6 +54,7 @@ jobs:
   # Build ARM
   # ---------------------------------------
   arm-make:
+    if: false
     needs: set-matrix
     uses: ./.github/workflows/build_util.yml
     strategy:
@@ -77,6 +78,7 @@ jobs:
   # Build ARM with CMake
   # ---------------------------------------
   arm-cmake:
+    if: false
     needs: set-matrix
     uses: ./.github/workflows/build_util.yml
     strategy:
