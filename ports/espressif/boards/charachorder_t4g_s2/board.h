@@ -66,7 +66,7 @@
 #define USB_VID                  0x303A   //espressif's
 #define USB_PID                  0x82F3
 #define USB_MANUFACTURER         "CharaChorder"
-#define USB_PRODUCT              "CharaChorder Forge Trackball S2 - UF2 Bootloader"
+#define USB_PRODUCT              "Forge Trackball S2 - UF2 Bootloader"
 
 #define UF2_PRODUCT_NAME         USB_MANUFACTURER " " USB_PRODUCT
 #define UF2_BOARD_ID             "CC-T4G-S2"
