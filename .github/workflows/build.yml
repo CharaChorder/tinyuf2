@@ -84,7 +84,7 @@ jobs:
     secrets: inherit
     with:
       port: 'espressif'
-      boards: '["charachorder_lite_s2", "charachorder_x_s2", "charachorder_engine_s2", "charachorder_two_s3", "charachorder_m4g_s3"]'
+      boards: '["charachorder_lite_s2", "charachorder_x_s2", "charachorder_engine_s2", "charachorder_two_s3", "charachorder_m4g_s3", "charachorder_t4g_s2"]'
       build-system: 'make'
       toolchain: 'esp-idf'
       toolchain_version: 'v5.1.4'
